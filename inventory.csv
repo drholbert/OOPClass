@@ -1,0 +1,51 @@
+category,name,price,inventory
+coffee,Espresso,3.00,100
+coffee,Latte,4.00,90
+coffee,Cappuccino,3.50,80
+coffee,Americano,3.00,85
+coffee,Mocha,4.50,75
+coffee,Macchiato,3.75,70
+coffee,Flat White,4.00,60
+coffee,Cold Brew,3.25,100
+coffee,Nitro Cold Brew,4.25,50
+coffee,Iced Coffee,2.50,100
+tea,Green Tea,2.00,120
+tea,Chai Latte,3.50,90
+tea,Matcha Latte,4.00,60
+tea,Black Tea,2.00,80
+tea,Herbal Tea,2.50,70
+tea,Iced Tea,2.25,100
+tea,Oolong Tea,3.00,50
+tea,White Tea,3.25,40
+tea,Chamomile Tea,3.00,45
+food,Croissant,2.00,40
+food,Muffin,2.50,50
+food,Bagel,1.50,100
+food,Scone,2.75,30
+food,Banana,1.00,100
+food,Yogurt Parfait,3.50,40
+food,Granola Bar,1.75,90
+food,Chocolate Chip Cookie,1.50,75
+food,Brownie,2.00,60
+food,Fruit Cup,3.00,45
+food,Turkey Sandwich,5.00,30
+food,Chicken Wrap,5.50,25
+food,Veggie Sandwich,4.75,35
+food,Protein Box,6.00,20
+food,Greek Yogurt,2.50,50
+coffee,Caramel Macchiato,4.75,80
+coffee,Vanilla Latte,4.25,90
+coffee,Pumpkin Spice Latte,5.00,40
+coffee,Toffee Nut Latte,4.75,60
+coffee,Hazelnut Latte,4.50,70
+tea,Lemon Iced Tea,2.50,95
+tea,Mint Tea,2.75,60
+tea,Hibiscus Tea,3.00,45
+food,Almond Croissant,3.00,35
+food,Blueberry Muffin,2.75,50
+food,Spinach Feta Wrap,4.00,25
+food,Avocado Spread,1.25,100
+food,Ham & Cheese Croissant,3.50,20
+food,Oatmeal,3.00,30
+food,Egg Bites,4.25,40
+food,Chicken Caesar Salad,6.50,20

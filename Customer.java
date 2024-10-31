@@ -1,53 +1,53 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Customer {
-    private int customerId;
+    private String customerId;
     private String name;
-    private String email;
+    private boolean isMember;
     private int loyaltyPoints;
-    private List<Transactions> orderHistory;
 
-    public Customer(int customerId, String name, String email) {
+    // Constructor
+    public Customer(String customerId, String name, boolean isMember, int loyaltyPoints) {
         this.customerId = customerId;
         this.name = name;
-        this.email = email;
+        this.isMember = isMember;
         this.loyaltyPoints = 0;
-        this.orderHistory = new ArrayList<>();
     }
 
-    public void addPoints(int points) {
-        loyaltyPoints += points;
+    /* GETTERS AND SETTERS */
+    public String getCustomerId() {
+        return customerId;
     }
-
-    public double applyDiscount(double totalPrice) {
-        double discount = Math.min(loyaltyPoints * 0.01, totalPrice);  // 1 point = $0.01
-        loyaltyPoints = 0;  // Reset points after applying the discount
-        return totalPrice - discount;
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
     }
-
-    public List<Transactions> getOrderHistory() {
-        return orderHistory;
+    public String getName() {
+        return name;
     }
-
-    public Transactions placeOrder(Product product, int quantity, int transactionId) {
-        if (product.isAvailable(quantity)) {
-            product.reduceStock(quantity);
-            double totalPrice = product.getPrice() * quantity;
-            Transactions transaction = new Transactions();
-            orderHistory.add(transaction);
-            addPoints((int) (totalPrice / 10));  // For every $10 spent, get 1 point
-            return transaction;
-        } else {
-            throw new IllegalArgumentException("Product out of stock");
-        }
+    public void setName(String name) {
+        this.name = name;
     }
-
+    public boolean isMember() {
+        return isMember;
+    }
+    public void setMember(boolean isMember) {
+        this.isMember = isMember;
+    }
     public int getLoyaltyPoints() {
         return loyaltyPoints;
     }
+    public void setLoyaltyPoints(int loyaltyPoints) {
+        this.loyaltyPoints = loyaltyPoints;
+    }
 
-    public String getName() {
-        return name;
+    // Method to add loyalty points
+    public void addLoyaltyPoints(int points) {
+        loyaltyPoints += points;
+    }
+
+    // Method to apply discount if customer is a member
+    public double applyDiscount(double totalAmount) {
+        if (isMember) {
+            return totalAmount * 0.9; // give 10% discount
+        }
+        return totalAmount;
     }
 }
